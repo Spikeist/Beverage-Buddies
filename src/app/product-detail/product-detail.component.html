@@ -1,0 +1,18 @@
+<div class="product-detail-container" *ngIf="product">
+    <div>
+        <img [src]="product.imageUrl" alt="{{ product.itemName }}" />
+    </div>
+    <div>
+        <h1>{{ product.itemName }}</h1>
+        <div class="product-details">
+            <p><strong>Description:</strong> {{ product.description }}</p>
+            <p><strong>Dairy Free:</strong> {{ product.dairyFree }}</p>
+            <p><strong>Price:</strong> ${{ product.price }}</p>
+        </div>
+        <a routerLink="/products">
+            <button>Back</button>
+        </a>
+        <button class="editBtn" (click)="onEditClick()">Edit</button>
+        <button class="deleteBtn" (click)="onDeleteClick()">Delete</button>
+    </div>
+</div>

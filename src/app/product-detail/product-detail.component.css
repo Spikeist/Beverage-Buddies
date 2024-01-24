@@ -1,0 +1,36 @@
+.product-detail-container {
+    display: flex;
+}
+
+h1 {
+    margin-left: 10%;
+    margin-top: 0%;
+}
+
+.product-details {
+    border: 2px solid yellow;
+    margin-left: 10%;
+    margin-top: -8%;
+    padding-left: 8%;
+}
+
+button {
+    margin-left: 10%;
+    margin-top: 5%;
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 10%;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: lightgray;
+}
+
+.editBtn {
+    color: blue;
+}
+
+.deleteBtn {
+    color: red;
+}

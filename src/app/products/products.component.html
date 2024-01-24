@@ -1,0 +1,25 @@
+<div class="header">   
+    <h1>Find your newest liquid friend!</h1>
+    <a routerLink="/add">
+        <button class="addBtn">Add</button>
+    </a>
+</div> 
+
+<div>
+    <label for="priceRange">Filter Price:&emsp;</label>
+    <select id="priceRange" [(ngModel)]="selectedPriceRange">
+        <option value="0-1.5">$0 - $1.50</option>
+        <option value="1.5-2">$1.50 - $2</option>
+        <option value="2-999999999999">$2 or more</option>
+    </select>
+    <button class="applyBtn" (click)="applyFilter()">Apply Filter</button>
+</div>
+  
+<div class="card" *ngFor="let product of filteredProducts">
+    <img [src]="product.imageUrl" alt="{{ product.itemName }}" />
+    <h3>{{ product.itemName }}&emsp;${{ product.price }}</h3>
+  
+    <button (click)="viewProduct(product.id)">View</button>
+    <button class="editBtn" (click)="editProduct(product.id)">Edit</button>
+    <button class="deleteBtn" (click)="deleteProduct(product.id)">Delete</button>
+</div>

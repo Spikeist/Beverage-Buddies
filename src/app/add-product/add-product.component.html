@@ -1,0 +1,33 @@
+<div class="add-product-container">
+    <h2>Create New Beverage</h2>
+    <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="itemName">Item Name</label>
+            <input type="text" id="itemName" formControlName="itemName" required />
+        </div>
+        <div class="form-group">
+            <label for="description">Description</label>
+            <textarea id="description" formControlName="description" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="dairyFree">Dairy-Free</label>
+            <input type="checkbox" id="dairyFree" formControlName="dairyFree" />
+        </div>
+        <div class="form-group">
+            <label for="price">Price</label>
+            <input type="number" id="price" formControlName="price" required />
+        </div>
+        <div class="form-group">
+            <label for="imageUrl">Image URL</label>
+            <input type="text" id="imageUrl" formControlName="imageUrl" required />
+        </div>
+        <div>
+            <a routerLink="/products">
+                <button>Back</button>
+            </a>
+            <a routerLink="/products">
+            <button class="sumbitBtn" type="submit">Sumbit</button>
+            </a>
+        </div>
+    </form>
+</div>
